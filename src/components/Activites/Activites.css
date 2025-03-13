@@ -1,0 +1,223 @@
+.activites-page {
+    padding: 2rem 0;
+  }
+  
+  .page-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #343a40;
+  }
+  
+  /* Banner */
+  .intro-banner {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/images/activities-banner.jpg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 2rem;
+  }
+  
+  .intro-content {
+    padding: 4rem 2rem;
+    text-align: center;
+    color: white;
+  }
+  
+  .intro-content h2 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  
+  .intro-content p {
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  /* Filter Section */
+  .filter-section {
+    margin-bottom: 2rem;
+  }
+  
+  .filter-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+  }
+  
+  .filter-icon {
+    margin-right: 0.5rem;
+    color: #4a89dc;
+  }
+  
+  /* Activity Cards */
+  .activity-card {
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+  }
+  
+  .activity-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  }
+  
+  .activity-image-container {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+  }
+  
+  .activity-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+  
+  .activity-card:hover .activity-image {
+    transform: scale(1.1);
+  }
+  
+  .difficulty-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    padding: 0.4rem 0.8rem;
+    border-radius: 30px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: white;
+  }
+  
+  .badge-success {
+    background-color: #28a745;
+  }
+  
+  .badge-primary {
+    background-color: #4a89dc;
+  }
+  
+  .badge-warning {
+    background-color: #f0ad4e;
+  }
+  
+  .badge-danger {
+    background-color: #d9534f;
+  }
+  
+  .badge-secondary {
+    background-color: #6c757d;
+  }
+  
+  .activity-description {
+    color: #6c757d;
+    margin-bottom: 1rem;
+    min-height: 75px;
+  }
+  
+  .season-info {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Rating */
+  .rating {
+    display: flex;
+    align-items: center;
+  }
+  
+  .rating-star {
+    color: #f0ad4e;
+    margin-right: 2px;
+  }
+  
+  .rating-star-half {
+    color: #f0ad4e;
+    margin-right: 2px;
+    opacity: 0.5;
+  }
+  
+  .rating-count {
+    font-size: 0.85rem;
+    color: #6c757d;
+    margin-left: 5px;
+  }
+  
+  /* CTA Section */
+  .cta-section {
+    margin-top: 3rem;
+  }
+  
+  .cta-section .card {
+    border: none;
+    border-radius: 8px;
+    background-color: #f8f9fa;
+    padding: 1rem;
+  }
+  
+  .cta-section h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  
+  .cta-section p {
+    color: #6c757d;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Responsive */
+  @media (max-width: 992px) {
+    .intro-content {
+      padding: 3rem 1.5rem;
+    }
+    
+    .intro-content h2 {
+      font-size: 1.8rem;
+    }
+    
+    .intro-content p {
+      font-size: 1rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .page-title {
+      font-size: 2rem;
+    }
+    
+    .filter-title {
+      font-size: 1.2rem;
+    }
+    
+    .activity-image-container {
+      height: 180px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .intro-content {
+      padding: 2rem 1rem;
+    }
+    
+    .intro-content h2 {
+      font-size: 1.5rem;
+    }
+    
+    .page-title {
+      font-size: 1.8rem;
+    }
+    
+    .cta-section h3 {
+      font-size: 1.3rem;
+    }
+  }

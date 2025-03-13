@@ -1,0 +1,194 @@
+.contact-page {
+    padding: 2rem 0;
+  }
+  
+  .page-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #343a40;
+  }
+  
+  /* Bannière d'introduction */
+  .intro-banner {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/images/contact-banner.jpg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 2rem;
+  }
+  
+  .intro-content {
+    padding: 4rem 2rem;
+    text-align: center;
+    color: white;
+  }
+  
+  .intro-content h2 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  
+  .intro-content p {
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  /* Cartes */
+  .contact-info-card,
+  .contact-form-card,
+  .faqs-card {
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    height: 100%;
+  }
+  
+  .card-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: #343a40;
+  }
+  
+  .card-subtitle {
+    font-size: 1rem;
+    color: #6c757d;
+    margin-bottom: 2rem;
+  }
+  
+  /* Informations de contact */
+  .contact-info-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .contact-info-list li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+  }
+  
+  .contact-icon {
+    color: #4a89dc;
+    font-size: 1.2rem;
+    margin-right: 1rem;
+    margin-top: 4px;
+  }
+  
+  .contact-info-list li div {
+    flex: 1;
+  }
+  
+  .contact-info-list li strong {
+    display: block;
+    margin-bottom: 0.3rem;
+    font-size: 1rem;
+  }
+  
+  .contact-info-list li p {
+    margin-bottom: 0.5rem;
+    color: #6c757d;
+  }
+  
+  /* FAQs */
+  .faqs-list {
+    margin-top: 1rem;
+  }
+  
+  .faq-item {
+    margin-bottom: 1.5rem;
+  }
+  
+  .faq-item h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #343a40;
+  }
+  
+  .faq-item p {
+    font-size: 0.9rem;
+    color: #6c757d;
+  }
+  
+  /* Formulaire */
+  .form-label {
+    font-weight: 500;
+  }
+  
+  .submit-button {
+    padding: 0.75rem 2rem;
+    font-weight: 500;
+  }
+  
+  /* Carte Google Maps */
+  .map-section {
+    margin-top: 3rem;
+  }
+  
+  .section-title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .map-container {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  }
+  
+  /* Responsive */
+  @media (max-width: 992px) {
+    .intro-content {
+      padding: 3rem 1.5rem;
+    }
+    
+    .intro-content h2 {
+      font-size: 1.8rem;
+    }
+    
+    .intro-content p {
+      font-size: 1rem;
+    }
+    
+    .contact-info-section {
+      margin-bottom: 2rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .page-title {
+      font-size: 2rem;
+    }
+    
+    .section-title {
+      font-size: 1.5rem;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .intro-content {
+      padding: 2rem 1rem;
+    }
+    
+    .intro-content h2 {
+      font-size: 1.5rem;
+    }
+    
+    .page-title {
+      font-size: 1.8rem;
+    }
+    
+    .card-title {
+      font-size: 1.3rem;
+    }
+  }

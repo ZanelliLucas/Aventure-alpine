@@ -1,0 +1,244 @@
+.randonnee-page {
+    padding: 2rem 0;
+  }
+  
+  .page-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #343a40;
+  }
+  
+  /* Bannière d'introduction */
+  .intro-banner {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/images/randonnee-banner.jpg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 2rem;
+  }
+  
+  .intro-content {
+    padding: 4rem 2rem;
+    text-align: center;
+    color: white;
+  }
+  
+  .intro-content h2 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  
+  .intro-content p {
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  /* Section des filtres */
+  .filter-section {
+    margin-bottom: 2rem;
+  }
+  
+  .filter-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+  }
+  
+  .filter-icon {
+    margin-right: 0.5rem;
+    color: #4a89dc;
+  }
+  
+  /* Cartes d'itinéraires */
+  .itineraire-card {
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+  }
+  
+  .itineraire-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  }
+  
+  .itineraire-image-container {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+  }
+  
+  .itineraire-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+  
+  .itineraire-card:hover .itineraire-image {
+    transform: scale(1.1);
+  }
+  
+  .itineraire-badges {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .season-badge, .guide-badge {
+    padding: 0.4rem 0.8rem;
+    border-radius: 30px;
+    font-size: 0.75rem;
+    font-weight: 600;
+  }
+  
+  .itineraire-details {
+    margin: 1rem 0;
+  }
+  
+  .detail-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+  }
+  
+  .detail-icon {
+    color: #4a89dc;
+    margin-right: 0.5rem;
+    min-width: 16px;
+  }
+  
+  .itineraire-description {
+    color: #6c757d;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    min-height: 60px;
+  }
+  
+  /* Section des conseils */
+  .tips-section {
+    margin: 3rem 0;
+    padding: 2rem;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+  }
+  
+  .tips-section h3 {
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+  }
+  
+  .tip-card {
+    text-align: center;
+    padding: 1.5rem;
+    height: 100%;
+  }
+  
+  .tip-icon {
+    font-size: 2.5rem;
+    color: #4a89dc;
+    margin-bottom: 1rem;
+  }
+  
+  .tip-card h4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  
+  .tip-card p {
+    font-size: 0.9rem;
+    color: #6c757d;
+  }
+  
+  /* Section d'appel à l'action */
+  .cta-section {
+    margin-bottom: 2rem;
+  }
+  
+  .cta-section .card {
+    border: none;
+    border-radius: 8px;
+    background-color: #f8f9fa;
+    padding: 1rem;
+  }
+  
+  .cta-section h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  
+  .cta-section p {
+    color: #6c757d;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Responsive */
+  @media (max-width: 992px) {
+    .intro-content {
+      padding: 3rem 1.5rem;
+    }
+    
+    .intro-content h2 {
+      font-size: 1.8rem;
+    }
+    
+    .intro-content p {
+      font-size: 1rem;
+    }
+    
+    .tip-card {
+      margin-bottom: 1.5rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .page-title {
+      font-size: 2rem;
+    }
+    
+    .filter-title {
+      font-size: 1.2rem;
+    }
+    
+    .itineraire-image-container {
+      height: 180px;
+    }
+    
+    .tips-section h3 {
+      font-size: 1.5rem;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .intro-content {
+      padding: 2rem 1rem;
+    }
+    
+    .intro-content h2 {
+      font-size: 1.5rem;
+    }
+    
+    .page-title {
+      font-size: 1.8rem;
+    }
+    
+    .cta-section h3 {
+      font-size: 1.3rem;
+    }
+  }
