@@ -1,0 +1,227 @@
+.partage-experience-page {
+    padding: 2rem 0;
+  }
+  
+  .page-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #343a40;
+  }
+  
+  /* Bannière d'introduction */
+  .intro-banner {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/images/partage-banner.jpg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 2rem;
+  }
+  
+  .intro-content {
+    padding: 4rem 2rem;
+    text-align: center;
+    color: white;
+  }
+  
+  .intro-content h2 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  
+  .intro-content p {
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  /* Section du formulaire */
+  .form-section {
+    margin-bottom: 3rem;
+  }
+  
+  .form-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  
+  /* Section des expériences */
+  .experiences-section {
+    margin-bottom: 3rem;
+  }
+  
+  .section-title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 2rem;
+    position: relative;
+  }
+  
+  .section-title::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -10px;
+    width: 50px;
+    height: 3px;
+    background-color: #4a89dc;
+  }
+  
+  /* Cartes d'expérience */
+  .experience-card {
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+  }
+  
+  .experience-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  }
+  
+  .experience-image-container {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+  }
+  
+  .experience-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+  
+  .experience-card:hover .experience-image {
+    transform: scale(1.1);
+  }
+  
+  .experience-sport-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: #4a89dc;
+    color: white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 30px;
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+  
+  .experience-meta {
+    margin: 1rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 0.8rem;
+    color: #6c757d;
+  }
+  
+  .meta-item {
+    display: flex;
+    align-items: center;
+    margin-right: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .meta-icon {
+    color: #4a89dc;
+    margin-right: 0.3rem;
+  }
+  
+  .experience-content {
+    color: #6c757d;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    min-height: 60px;
+  }
+  
+  .comments-count {
+    display: flex;
+    align-items: center;
+    font-size: 0.8rem;
+    color: #6c757d;
+  }
+  
+  /* Section d'encouragement */
+  .encouragement-section {
+    margin-bottom: 2rem;
+  }
+  
+  .encouragement-section h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  
+  .encouragement-section p {
+    color: #6c757d;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Responsive */
+  @media (max-width: 992px) {
+    .intro-content {
+      padding: 3rem 1.5rem;
+    }
+    
+    .intro-content h2 {
+      font-size: 1.8rem;
+    }
+    
+    .intro-content p {
+      font-size: 1rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .page-title {
+      font-size: 2rem;
+    }
+    
+    .section-title {
+      font-size: 1.5rem;
+    }
+    
+    .experience-image-container {
+      height: 180px;
+    }
+    
+    .experience-meta {
+      flex-direction: column;
+    }
+    
+    .meta-item {
+      margin-bottom: 0.3rem;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .intro-content {
+      padding: 2rem 1rem;
+    }
+    
+    .intro-content h2 {
+      font-size: 1.5rem;
+    }
+    
+    .page-title {
+      font-size: 1.8rem;
+    }
+    
+    .form-title {
+      font-size: 1.3rem;
+    }
+    
+    .encouragement-section h3 {
+      font-size: 1.3rem;
+    }
+  }
