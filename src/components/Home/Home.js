@@ -13,6 +13,9 @@ const Home = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
+        // Simuler des données si l'API n'est pas disponible
+        // Dans une application réelle, décommentez ces lignes
+        /*
         // Récupérer les activités
         const activitesRes = await axios.get('/api/activites');
         
@@ -21,6 +24,66 @@ const Home = () => {
         
         setActivites(activitesRes.data.slice(0, 3)); // Limiter à 3 activités pour la page d'accueil
         setArticles(articlesRes.data.slice(0, 3)); // Limiter à 3 articles pour la page d'accueil
+        */
+
+        // Données simulées pour les activités
+        const mockActivites = [
+          {
+            id: 1,
+            nom: "Randonnée au Lac Blanc",
+            description: "Une randonnée magnifique avec vue sur le Mont Blanc",
+            niveau_difficulte: "intermediaire",
+            image_url: "/images/randonnee-lac-blanc.jpg",
+            saison_recommandee: "Été"
+          },
+          {
+            id: 2,
+            nom: "Escalade à Chamonix",
+            description: "Grimper sur les plus belles parois des Alpes",
+            niveau_difficulte: "avance",
+            image_url: "/images/escalade-chamonix.jpg",
+            saison_recommandee: "Été"
+          },
+          {
+            id: 3,
+            nom: "Ski à Val d'Isère",
+            description: "Ski alpin sur l'un des plus beaux domaines des Alpes",
+            niveau_difficulte: "intermediaire",
+            image_url: "/images/ski-val-disere.jpg",
+            saison_recommandee: "Hiver"
+          }
+        ];
+
+        // Données simulées pour les articles
+        const mockArticles = [
+          {
+            id: 1,
+            titre: "Les 10 plus belles randonnées des Alpes",
+            contenu: "Contenu détaillé sur les randonnées des Alpes françaises avec conseils et descriptions.",
+            date_publication: "2023-03-15",
+            auteur_nom: "Jean Alpiniste",
+            image_url: "/images/randonnees-alpes.jpg"
+          },
+          {
+            id: 2,
+            titre: "Débuter en escalade: guide complet",
+            contenu: "Tout ce que vous devez savoir pour commencer l'escalade en toute sécurité, du matériel aux techniques de base.",
+            date_publication: "2023-04-20",
+            auteur_nom: "Sophie Grimpeuse",
+            image_url: "/images/debuter-escalade.jpg"
+          },
+          {
+            id: 3,
+            titre: "Préparer son matériel de ski pour l'hiver",
+            contenu: "Comment entretenir et préparer votre équipement avant la saison pour des performances optimales.",
+            date_publication: "2023-10-05",
+            auteur_nom: "Marc Skieur",
+            image_url: "/images/materiel-ski.jpg"
+          }
+        ];
+
+        setActivites(mockActivites);
+        setArticles(mockArticles);
         setLoading(false);
       } catch (error) {
         console.error('Erreur lors de la récupération des données:', error);

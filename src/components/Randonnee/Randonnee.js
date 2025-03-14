@@ -44,9 +44,6 @@ const Randonnee = () => {
         result = result.filter(
           itineraire => itineraire.region.toLowerCase().includes(regionFilter.toLowerCase())
         );
-};
-
-export default Randonnee;
       }
       
       // Filtre par distance
@@ -321,3 +318,6 @@ export default Randonnee;
       </Container>
     </div>
   );
+};
+
+export default Randonnee;
