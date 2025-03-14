@@ -5,8 +5,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
 // Importation des composants
-import Header from './components/Header';
-import Footer from './components/Footer';
+import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
 import Home from './pages/Home';
 import Sports from './pages/Sports';
 import Articles from './pages/Articles';
@@ -20,6 +20,10 @@ import Contact from './pages/Contact';
 import NotFound from './pages/NotFound';
 import PartageExperience from './pages/PartageExperience';
 
+// Ajout du composant pour gérer les activités
+import Activites from './components/Activites/Activites';
+import AjouterActivite from './components/Activites/AjouterActivite'; // Importez le nouveau composant
+
 function App() {
   return (
     <Router>
@@ -30,6 +34,8 @@ function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/sports" element={<Sports />} />
+              <Route path="/activites" element={<Activites />} />
+              <Route path="/activites/ajouter" element={<AjouterActivite />} /> {/* Nouvelle route */}
               <Route path="/articles" element={<Articles />} />
               <Route path="/articles/:id" element={<ArticleDetail />} />
               <Route path="/videos" element={<Videos />} />

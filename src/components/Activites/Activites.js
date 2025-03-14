@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Container, Row, Col, Card, Button, Form, Spinner } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
-import { FaStar, FaFilter } from 'react-icons/fa';
+import { FaStar, FaFilter, FaPlus } from 'react-icons/fa';
 import './Activites.css';
 
 const Activites = () => {
@@ -114,7 +114,15 @@ const Activites = () => {
   return (
     <div className="activites-page">
       <Container>
-        <h1 className="page-title">Nos Activités</h1>
+        {/* Ajout du titre et du bouton d'ajout d'activité */}
+        <div className="d-flex justify-content-between align-items-center mb-4">
+          <h1 className="page-title">Nos Activités</h1>
+          <Link to="/activites/ajouter">
+            <Button variant="primary">
+              <FaPlus className="me-2" /> Ajouter une activité
+            </Button>
+          </Link>
+        </div>
         
         {/* Bannière d'introduction */}
         <div className="intro-banner">
