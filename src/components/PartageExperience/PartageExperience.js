@@ -5,12 +5,10 @@ import { FaCamera, FaMapMarkerAlt, FaCalendarAlt, FaUser, FaComments } from 'rea
 import './PartageExperience.css';
 
 const PartageExperience = () => {
-  // État pour les expériences partagées
   const [experiences, setExperiences] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   
-  // État pour le formulaire
   const [formData, setFormData] = useState({
     titre: '',
     contenu: '',
@@ -20,25 +18,16 @@ const PartageExperience = () => {
     image: null
   });
   
-  // État pour la soumission du formulaire
   const [submitting, setSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
   const [submitError, setSubmitError] = useState(null);
   const [validated, setValidated] = useState(false);
   
-  // État pour l'affichage
   const [showForm, setShowForm] = useState(false);
   
-  // Récupération des expériences partagées
   useEffect(() => {
     const fetchExperiences = async () => {
       try {
-        // Dans une application réelle, cette URL serait vers votre API
-        // Ici, je simule des données pour la démo
-        // const response = await axios.get('/api/partage-experience');
-        // setExperiences(response.data);
-        
-        // Données simulées
         const mockExperiences = [
           {
             id: 1,

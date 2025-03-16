@@ -19,8 +19,8 @@ const Header = () => {
           <LinkContainer to="/">
             <Navbar.Brand>
               <img 
-                src="/logo.svg" 
-                alt="Aventures Alpines Logo" 
+                src="/images/logo.jpg" 
+                alt="Logo" 
                 className="navbar-logo" 
               />
               Aventures Alpines

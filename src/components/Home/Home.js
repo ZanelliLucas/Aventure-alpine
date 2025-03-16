@@ -248,31 +248,48 @@ const Home = () => {
             <p className="text-center">Chargement des articles...</p>
           ) : (
             <Row>
-              {articles.map(article => (
-                <Col md={4} key={article.id}>
-                  <Card className="blog-card">
-                    <Card.Img 
-                      variant="top" 
-                      src={article.image_url || '/images/default-article.jpg'} 
-                      alt={article.titre} 
-                    />
-                    <Card.Body>
-                      <Card.Title>{article.titre}</Card.Title>
-                      <Card.Text>
-                        {article.contenu.substring(0, 100)}...
-                      </Card.Text>
-                      <div className="d-flex justify-content-between align-items-center">
-                        <small className="text-muted">
-                          {new Date(article.date_publication).toLocaleDateString()}
-                        </small>
-                        <Link to={`/articles/${article.id}`}>
-                          <Button variant="outline-primary" size="sm">Lire plus</Button>
-                        </Link>
-                      </div>
-                    </Card.Body>
-                  </Card>
-                </Col>
-              ))}
+              {articles.map((article, index) => {
+                let imageUrl;
+                
+                if (index === 0) {
+                  imageUrl = `${window.location.origin}/images/randonnees-alpes.jpg`;
+                } else if (index === 1) {
+                  imageUrl = `${window.location.origin}/images/debuter-escalade.jpg`;
+                } else if (index === 2) {
+                  imageUrl = `${window.location.origin}/images/materiel-ski.jpg`;
+                } else {
+                  imageUrl = `${window.location.origin}/images/default-article.jpg`;
+                }
+                
+                return (
+                  <Col md={4} key={article.id}>
+                    <Card className="blog-card">
+                      <Card.Img 
+                        variant="top" 
+                        src={imageUrl}
+                        alt={article.titre} 
+                        onError={(e) => {
+                          e.target.src = `${window.location.origin}/images/default-article.jpg`;
+                        }}
+                      />
+                      <Card.Body>
+                        <Card.Title>{article.titre}</Card.Title>
+                        <Card.Text>
+                          {article.contenu.substring(0, 100)}...
+                        </Card.Text>
+                        <div className="d-flex justify-content-between align-items-center">
+                          <small className="text-muted">
+                            {new Date(article.date_publication).toLocaleDateString()}
+                          </small>
+                          <Link to={`/articles/${article.id}`}>
+                            <Button variant="outline-primary" size="sm">Lire plus</Button>
+                          </Link>
+                        </div>
+                      </Card.Body>
+                    </Card>
+                  </Col>
+                );
+              })}
             </Row>
           )}
           <div className="text-center mt-4">
